@@ -27,12 +27,41 @@ def pass_students():
 
     for key, value in students.items():
         if value > 50:
-            print(key + ' ' + 'passed')
+            pass
+            # print(key + ' ' + 'passed')
 
     
-    print(list(students.values())[0])
+    # print(list(students.values())[0])
 
+    number = []
+
+    for i in list_nums:
+        number.append(i * 2)
+
+    # print(number)
+
+    new_dict = dict(zip(list_nums, number))
+
+    # print(list_nums)
+    # print(number)
+    # print(new_dict)
+    weather_dict = {}
+
+    for key, value in weather.items():
+        convert = value
+        weather_dict[key] = (convert * 9 /5) + 32 
+
+    # print(weather_dict)
 pass_students()
+
+import random
+# Open file
+with open('quotes.txt') as file1:
+    lines = file1.readlines()
+
+# print(lines)
+select_item = random.choice(lines)
+print(select_item)
 
 
 
