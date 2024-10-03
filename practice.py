@@ -30,7 +30,8 @@ def pass_students():
             print(key + ' ' + 'passed')
 
     
-
+    highest = list(students.values())[0]
+    print(highest)
 pass_students()
 
 
