@@ -1,4 +1,3 @@
--- Active: 1730372726448@@127.0.0.1@3306
 SELECT * 
 FROM crime_scene_reports 
 WHERE day = 28 
