@@ -17,11 +17,12 @@ ON pan.account_number = ba.account_number;
 
 --used ID from bank account to find names of people who made withdrawals 
 -- and look for person who appear in both persons_account_numbers and suspects temporary table
-SELECT p.name, p.phone_number, pan.account_number
+SELECT p.name, p.phone_number, pan.account_number, p.passport_number
 FROM persons_account_numbers pan
 JOIN bank_accounts ba ON pan.account_number = ba.account_number
 JOIN people p ON ba.person_id = p.id
 JOIN suspects s ON p.name = s.name;
+
 
 
 
