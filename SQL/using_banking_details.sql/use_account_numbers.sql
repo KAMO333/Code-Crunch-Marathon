@@ -24,6 +24,21 @@ JOIN people p ON ba.person_id = p.id
 JOIN suspects s ON p.name = s.name;
 
 
+SELECT p.name, p.passport_number, fa.destination_airport_id
+FROM persons_account_numbers pan
+JOIN bank_accounts ba ON pan.account_number = ba.account_number
+JOIN people p ON ba.person_id = p.id
+JOIN suspects s ON p.name = s.name
+JOIN passengers pas ON p.passport_number = pas.passport_number
+JOIN suspects_flights fa ON destination_airport_id = destination_airport_id
+
+
+
+
+-- The thief is Bruce, he was assistant by Diana, they flew to New York at 8:20 am on the 29th of July of 2023.
+
+
+
 
 
 
